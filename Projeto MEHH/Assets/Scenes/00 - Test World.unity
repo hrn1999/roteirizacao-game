@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 394728019}
   - component: {fileID: 394728018}
-  - component: {fileID: 394728017}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -130,18 +129,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &394728017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 394728016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339bf2f546b88b64fa62ce5825a70286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vcam: {fileID: 394728018}
 --- !u!114 &394728018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +150,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1551265563}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 1.82
+    OrthographicSize: 1.5
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -398,7 +385,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 1.82
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -658,49 +645,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1883357312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46ac8d61dc065848bd5a1aa7cd8c006, type: 3}
+  m_Script: {fileID: 11500000, guid: 339bf2f546b88b64fa62ce5825a70286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_WithTag: 
-  m_WithoutTag: 
-  m_SkipFirst: 0
-  m_Repeating: 1
-  m_OnObjectEnter:
-    m_Action: 0
-    m_Target: {fileID: 0}
-    m_BoostAmount: 0
-    m_StartTime: 0
-    m_Mode: 0
-    m_Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 394728017}
-          m_MethodName: Zoom
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 10
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: Cinemachine.CinemachineTriggerAction+ActionSettings+TriggerEvent,
-        Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_OnObjectExit:
-    m_Action: 0
-    m_Target: {fileID: 0}
-    m_BoostAmount: 0
-    m_StartTime: 0
-    m_Mode: 0
-    m_Event:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: Cinemachine.CinemachineTriggerAction+ActionSettings+TriggerEvent,
-        Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  vcam: {fileID: 394728018}
+  m_zinicial: 1
+  m_zoomax: 10
+  m_zoomin: 1
 --- !u!61 &1883357314
 BoxCollider2D:
   m_ObjectHideFlags: 0
