@@ -8,29 +8,17 @@ public class CinemachineZoomOut : MonoBehaviour {
     public CinemachineVirtualCamera vcam;
 
     public float zoomOut;
-    public float zoomIn;
     
+    //ampliar do normal
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if(vcam.m_Lens.OrthographicSize <= zoomOut)
+            //ampliar do normal
+            if (vcam.m_Lens.OrthographicSize <= zoomOut)
             {
                 vcam.m_Lens.OrthographicSize += Time.deltaTime;
             }
         }  
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            if (vcam.m_Lens.OrthographicSize > zoomIn)
-            {
-                vcam.m_Lens.OrthographicSize -= Time.deltaTime;
-            }
-        }
-    }
-
-
 }
