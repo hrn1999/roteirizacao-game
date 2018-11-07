@@ -4,13 +4,31 @@ using UnityEngine;
 
 public class PeixeAgua : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private bool beber;
+
+    public GameObject bebedouro;
+
+    private void Start()
+    {
+        beber = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        beber = true;
+        Debug.Log("ENTREI");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        beber = false;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (beber == true && Input.GetKeyDown("x"))
+        {
+            bebedouro.
+        }
+    }
 }
