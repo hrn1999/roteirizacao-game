@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 
-public class CinemachineZoomIn : MonoBehaviour
-{
+public class ZoomIn : MonoBehaviour {
 
     public CinemachineVirtualCamera vcam;
 
