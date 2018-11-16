@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlaySound : MonoBehaviour {
     public AudioSource audio;
+    public GameObject MusicListener;
     public float velocidade;
     public string tecla;
-    const float originalAudio= 1;
     
+    const float originalAudio= 1;
+
 	void Update () {
 		if(Input.GetKeyDown(tecla)){
             if (!audio.isPlaying){
@@ -17,32 +20,40 @@ public class PlaySound : MonoBehaviour {
                 StartCoroutine(FadeIn());
             }
         }
+
         if (Input.GetKeyUp(tecla)){
             StartCoroutine(FadeOut());
         }
 	}
 
-    IEnumerator FadeOut(){
-        float fadeAudio = 1;
-        while (audio.volume != 0){
-            fadeAudio -= velocidade;
-            audio.volume = fadeAudio;
-            yield return new WaitForSeconds(0.001f);
-        }
-        audio.enabled=false;
-        audio.loop = false;
-        yield return new WaitForSeconds(0.5f);
-    }
+    
 
     IEnumerator FadeIn(){
         float fadeAudio = 0;
+
         while (audio.volume < originalAudio){
             fadeAudio += velocidade;
             audio.volume = fadeAudio;
             yield return new WaitForSeconds(0.001f);
         }
+
         audio.enabled = true;
         audio.loop = true;
+    }
+
+    IEnumerator FadeOut(){
+        float fadeAudio = 1;
+
+        while (audio.volume != 0){
+            fadeAudio -= velocidade;
+            audio.volume = fadeAudio;
+            yield return new WaitForSeconds(0.001f);
+        }
+
+        audio.enabled = false;
+        audio.loop = false;
+        MusicListener.GetComponent<MusicListener>().disableButton();
+
     }
 }
 

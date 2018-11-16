@@ -76,8 +76,8 @@ Material:
     - _UVSec: 0
     - _V1: -5.06
     - _V2: 0.9
-    - _VRadius: 1
-    - _VSoft: 0.2
+    - _VRadius: 0.96
+    - _VSoft: 1
     - _VignetteSize: 2.86
     - _ZWrite: 1
     m_Colors:
