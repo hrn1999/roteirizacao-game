@@ -11437,7 +11437,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 36
+  field of view: 25
   orthographic: 0
   orthographic size: 2
   m_Depth: -1
@@ -11462,7 +11462,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: -0.04361939, w: 0.99904823}
-  m_LocalPosition: {x: 0.48754835, y: -1.9706004, z: -10}
+  m_LocalPosition: {x: -0.46650732, y: -1.3512502, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17913,11 +17913,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.48754835
+      value: -0.46650732
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.9706004
+      value: -1.3512502
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17948,6 +17948,16 @@ Prefab:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1439321916}
+    - target: {fileID: 114670007079000752, guid: d1141e4141913c841827092a9e9b50e2,
+        type: 2}
+      propertyPath: m_Lens.FieldOfView
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670007079000752, guid: d1141e4141913c841827092a9e9b50e2,
+        type: 2}
+      propertyPath: m_Lens.Dutch
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
   m_IsPrefabAsset: 0
