@@ -5,27 +5,27 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	public CharacterController2D controller;
-    public Animator animator;
+	public Animator animator;
 
-	public float runSpeed;
+	public float runSpeed = 40f;
+
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
-	
+
 	// Update is called once per frame
 	void Update () {
 
-        //Walking
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        
-        //Jumping
+
+		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
+			animator.SetBool("IsJumping", true);
 		}
-        
-        //Crouching
+
 		if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
@@ -34,6 +34,16 @@ public class PlayerMovement : MonoBehaviour {
 			crouch = false;
 		}
 
+	}
+
+	public void OnLanding ()
+	{
+		animator.SetBool("IsJumping", false);
+	}
+
+	public void OnCrouching (bool isCrouching)
+	{
+		animator.SetBool("IsCrouching", isCrouching);
 	}
 
 	void FixedUpdate ()
