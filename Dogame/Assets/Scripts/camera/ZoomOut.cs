@@ -12,9 +12,9 @@ public class ZoomOut : MonoBehaviour {
     {
         if (collision.CompareTag("Player"))
         {
-            if (vcam.m_Lens.OrthographicSize <= zoomOut)
+            if (vcam.m_Lens.FieldOfView <= zoomOut)
             {
-                vcam.m_Lens.OrthographicSize += Time.deltaTime;
+                vcam.m_Lens.FieldOfView += Time.deltaTime;
             }
         }
     }
