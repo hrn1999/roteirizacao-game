@@ -7,7 +7,10 @@ public class DialogManager : MonoBehaviour {
 
     public TextMeshProUGUI textDisplay;
     public GameObject[] dialogBox;
+
+    [TextArea(10, 15)]
     public string[] sentences;
+
     public float typingSpeed;
     private int index;
 
