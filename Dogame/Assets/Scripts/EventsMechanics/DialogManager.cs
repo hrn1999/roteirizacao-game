@@ -7,6 +7,8 @@ public class DialogManager : MonoBehaviour {
 
     public TextMeshProUGUI textDisplay;
     public GameObject[] dialogBox;
+    public GameObject haveDialog;
+    public int controller;
 
     [TextArea(10, 15)]
     public string[] sentences;
@@ -15,15 +17,12 @@ public class DialogManager : MonoBehaviour {
     private int index;
 
     public Animator dialogBoxAnim;
-    public GameObject continueButton;
+    public GameObject continueText;
     private AudioSource source;
-
-    void Start()
-    {
-        StartCoroutine(Type());
-    }
+    
   
     IEnumerator Type() {
+        dialogBox[controller].SetActive(true);
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
@@ -31,16 +30,33 @@ public class DialogManager : MonoBehaviour {
         }
     }
 
-    void Update() {
-            if(textDisplay.text == sentences[index])
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            continueButton.SetActive(true);
+            haveDialog.SetActive(true);
+            if (Input.GetKeyDown("space"))
+            {
+                beginDialog();
+            }
         }
     }
-    public void NextSentence() {
+
+    void Update() {
+            if(textDisplay.text == sentences[index])
+            {
+                continueText.SetActive(true);
+                if (Input.GetKeyDown("space"))
+                {
+                    beginDialog();
+                }
+            }
+    }
+
+    public void beginDialog() {
         source.Play();
         dialogBoxAnim.SetTrigger("Change");
-        continueButton.SetActive(false);
+        continueText.SetActive(false);
 
         if (index < sentences.Length - 1)
         {
@@ -50,7 +66,7 @@ public class DialogManager : MonoBehaviour {
         }
         else {
             textDisplay.text = "";
-            continueButton.SetActive(false);
+            continueText.SetActive(false);
         }
     }
     

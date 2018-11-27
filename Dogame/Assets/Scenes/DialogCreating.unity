@@ -143,10 +143,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 551307681}
   dialogBox: []
-  sentences: []
+  haveDialog: {fileID: 0}
+  controller: 0
+  sentences:
+  - 
+  - 
   typingSpeed: 0.01
   dialogBoxAnim: {fileID: 0}
-  continueButton: {fileID: 1240066803}
+  continueText: {fileID: 0}
 --- !u!4 &62994622
 Transform:
   m_ObjectHideFlags: 0
@@ -243,11 +247,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1240066803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1192734115997228, guid: c8552338c79ecdb428e6cc8e985ede7c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1280620489}
 --- !u!1001 &1280620489
 Prefab:
   m_ObjectHideFlags: 0
