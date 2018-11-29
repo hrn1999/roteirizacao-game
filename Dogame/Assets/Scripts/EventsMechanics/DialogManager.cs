@@ -4,71 +4,70 @@ using UnityEngine;
 using TMPro;
 
 public class DialogManager : MonoBehaviour {
+    [Header("Configuração Canvas")]
+    public TextMeshProUGUI textDisplay; // Onde sera escrito a frase;
+    public GameObject haveDialog; // Aviso de Dialogo;
+    public GameObject textObj;
 
-    public TextMeshProUGUI textDisplay;
-    public GameObject[] dialogBox;
-    public GameObject haveDialog;
-    public int controller;
-
+    [Header("Sequência do dialogo")]
+    public GameObject[] dialogBox; // Quem vai falar a frase;
     [TextArea(10, 15)]
-    public string[] sentences;
+    public string[] sentences; // Onde será colocado cada frase;
 
-    public float typingSpeed;
-    private int index;
-
+    [Header("Animações e Sons")]
     public Animator dialogBoxAnim;
     public GameObject continueText;
     private AudioSource source;
-    
-  
-    IEnumerator Type() {
-        dialogBox[controller].SetActive(true);
-        foreach(char letter in sentences[index].ToCharArray())
-        {
-            textDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
+
+    public int controller;
+    public bool isDialog;
+    public float tempo;
+
+    private void Start()
+    {
+        Debug.Log("Number of sentenses " + sentences.Length);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             haveDialog.SetActive(true);
-            if (Input.GetKeyDown("space"))
-            {
-                beginDialog();
-            }
         }
     }
 
-    void Update() {
-            if(textDisplay.text == sentences[index])
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(Input.GetKeyDown("space") && collision.CompareTag("Player")) {
+            Dialog();
+        }
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            haveDialog.SetActive(false);
+        }
+    }
+
+    public void Dialog()
+    {
+            dialogBox[controller].SetActive(true);
+            textObj.SetActive(true);
+            textDisplay.text = sentences[controller];
+            continueText.SetActive(true);
+            if (Input.GetKeyDown("z"))
             {
-                continueText.SetActive(true);
-                if (Input.GetKeyDown("space"))
+                dialogBox[controller].SetActive(false);
+                textObj.SetActive(false);
+                textDisplay.text = sentences[controller];
+                continueText.SetActive(false);
+                if(controller <= sentences.Length)
                 {
-                    beginDialog();
+                    controller++;
+                    Dialog();
                 }
             }
-    }
-
-    public void beginDialog() {
-        source.Play();
-        dialogBoxAnim.SetTrigger("Change");
-        continueText.SetActive(false);
-
-        if (index < sentences.Length - 1)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
         }
-        else {
-            textDisplay.text = "";
-            continueText.SetActive(false);
-        }
-    }
-    
-
 }
