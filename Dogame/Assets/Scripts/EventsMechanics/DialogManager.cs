@@ -39,6 +39,8 @@ public class DialogManager : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(Input.GetKeyDown("space") && collision.CompareTag("Player")) {
+            /** Chama uma função que abra a caixa de diálogo */
+
             Dialog();
         }
 
@@ -68,6 +70,8 @@ public class DialogManager : MonoBehaviour {
                     controller++;
                     Dialog();
                 }
-            }
-        }
+            }/** e coloca o Dialog() aqui */
+    }
+
+
 }
