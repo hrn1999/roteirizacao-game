@@ -18,16 +18,16 @@ public class TriggerMemory : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
             objectToSee.SetActive(true);
+            StartCoroutine(VisionTime(timeToChange));
         }
 
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public IEnumerator VisionTime(float time)
     {
-        if (collision.CompareTag("Player"))
-        {
-            objectToSee.SetActive(false);
-        }
+        yield return new WaitForSeconds(time);
+        objectToSee.SetActive(false);
+        Destroy(gameObject);
     }
 }
