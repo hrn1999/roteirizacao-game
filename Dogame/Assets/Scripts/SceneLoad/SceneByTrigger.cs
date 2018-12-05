@@ -13,7 +13,7 @@ public class SceneByTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Playe"))
+        if(collision.CompareTag("Player"))
         {
             StartCoroutine(LoadLevelAfterTrigger(timeToChange));
         }

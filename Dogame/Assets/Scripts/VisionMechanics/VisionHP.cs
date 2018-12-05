@@ -14,11 +14,15 @@ public class VisionHP : MonoBehaviour {
     [Header("Canvas Configuration")]
     public float CharacterVision;
 
+    private void Awake()
+    {
+        mat.SetFloat("_VRadius", visionRadius);
+        mat.SetFloat("_VSoft", visionSoftness);
+    }
 
     private void Update()
     {
         mat.SetFloat("_VRadius", visionRadius);
-        mat.SetFloat("_VSoft", visionSoftness);
     }
 
 }
