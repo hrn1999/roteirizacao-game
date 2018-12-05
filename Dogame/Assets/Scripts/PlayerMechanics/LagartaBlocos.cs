@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LagartaBlocos : MonoBehaviour {
 
-    private bool chamar;
+    public bool chamar;
+
+    public bool musicPlayed = false;
 
     public List<GameObject> plataformas = new List<GameObject>();
 
@@ -16,7 +18,6 @@ public class LagartaBlocos : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         chamar = true;
-        Debug.Log("ENTREI");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -26,12 +27,14 @@ public class LagartaBlocos : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (chamar == true && Input.GetKeyDown("x"))
-        { 
+        if (chamar == true && musicPlayed==true)
+        {
+            print("entrou");
             for (int i = 0; i < plataformas.Count; i++)
             {
                 plataformas[i].SetActive(true);
             }
+            musicPlayed = false;
         }
     }
 }

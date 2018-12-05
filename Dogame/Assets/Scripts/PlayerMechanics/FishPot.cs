@@ -17,10 +17,6 @@ public class FishPot : MonoBehaviour {
 
     private IEnumerator OnTriggerStay2D(Collider2D collision)
     {
-        if (waterContainer[1])
-        {
-            //Fazer Beber Agua e Aumentar Visão.
-        }
 
         if(Input.GetKeyDown("x") && collision.CompareTag("Player"))
         {

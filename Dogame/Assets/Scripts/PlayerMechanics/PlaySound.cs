@@ -8,7 +8,7 @@ public class PlaySound : MonoBehaviour {
     public GameObject MusicListener;
     public float velocidade;
     public string tecla;
-    
+    public Button[] outrosBotoes;
     const float originalAudio= 1;
 
 	void Update () {
@@ -17,11 +17,13 @@ public class PlaySound : MonoBehaviour {
                 audio.enabled = true;
                 audio.loop = true;
                 audio.Play();
+                MusicListener.GetComponent<MusicListener>().disableOtherButtons(outrosBotoes, false);
                 StartCoroutine(FadeIn());
             }
         }
 
         if (Input.GetKeyUp(tecla)){
+            MusicListener.GetComponent<MusicListener>().disableOtherButtons(outrosBotoes, true);
             StartCoroutine(FadeOut());
         }
 	}
@@ -53,7 +55,6 @@ public class PlaySound : MonoBehaviour {
         audio.enabled = false;
         audio.loop = false;
         MusicListener.GetComponent<MusicListener>().disableButton();
-
     }
 }
 
