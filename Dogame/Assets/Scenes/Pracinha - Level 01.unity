@@ -144,7 +144,7 @@ RectTransform:
   m_Children:
   - {fileID: 910479223}
   m_Father: {fileID: 518695670}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -5679,11 +5679,11 @@ RectTransform:
   m_Children:
   - {fileID: 775175732}
   m_Father: {fileID: 518695670}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.999939, y: -30.000061}
+  m_AnchoredPosition: {x: -29.999939, y: -30}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &320120001
@@ -6195,6 +6195,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1017455415}
   - {fileID: 12825694}
   - {fileID: 320120000}
   - {fileID: 1661715145}
@@ -16594,7 +16595,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518695670}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -21346,6 +21347,60 @@ Transform:
   m_Father: {fileID: 813105697}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1017455414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017455415}
+  - component: {fileID: 1017455416}
+  m_Layer: 5
+  m_Name: DialogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1017455415
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017455414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 518695670}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1017455416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017455414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24bac3fe6470ed4a97dab3beeae5425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dbox: []
+  dtextObj: {fileID: 957262786}
+  dtext: {fileID: 957262788}
+  dialoaglines:
+  - 
+  - 
+  - 
+  currentLines: 0
+  dialogActive: 0
 --- !u!1 &1043459070
 GameObject:
   m_ObjectHideFlags: 0
@@ -27162,8 +27217,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1409278469}
   - component: {fileID: 1409278468}
-  - component: {fileID: 1409278467}
   - component: {fileID: 1409278466}
+  - component: {fileID: 1409278467}
   m_Layer: 0
   m_Name: Poste
   m_TagString: Untagged
@@ -27204,25 +27259,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1409278465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 054a72b3cf3ff5a42bb49e45514e54a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a305eb7c6b420dc4d92b2852a2bd9414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 957262788}
-  haveDialog: {fileID: 704304595}
-  textObj: {fileID: 957262786}
-  dialogBox:
-  - {fileID: 12825693}
-  - {fileID: 320119999}
-  - {fileID: 12825693}
-  sentences:
-  - Au au xablau
-  - "Cacete voce falou!\t"
-  - Carai to xapadinho!
-  dialogBoxAnim: {fileID: 0}
-  continueText: {fileID: 1661715144}
-  controller: 0
-  isDialog: 0
-  tempo: 0
+  dialogue: Hey Man!
+  dialogueLines:
+  - 123
+  - 12312312
+  - 2131231231231
 --- !u!212 &1409278468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32066,7 +32110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1449532658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.476628, y: -2.0209272, z: -10}
+  m_LocalPosition: {x: -9.604017, y: -2.0209272, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -33505,11 +33549,11 @@ RectTransform:
   m_Children:
   - {fileID: 1652661488}
   m_Father: {fileID: 518695670}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.999817, y: -30.000061}
+  m_AnchoredPosition: {x: -29.999817, y: -30}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1661715146
@@ -39030,7 +39074,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.476628
+      value: -9.604017
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y

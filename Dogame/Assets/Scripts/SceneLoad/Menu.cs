@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
-    public void StartGame(string SceneToLoad)
+    [SerializeField]
+    private string levelToChange;
+
+    public Animator animator;
+
+    public void StartGame()
     {
-        SceneManager.LoadScene(SceneToLoad);
+        SceneManager.LoadScene(levelToChange);
     }
 
     public void ExitGame()
@@ -15,4 +20,6 @@ public class Menu : MonoBehaviour {
         Debug.Log("Exit");
         Application.Quit();
     }
+
+
 }
