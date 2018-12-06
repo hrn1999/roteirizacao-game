@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ConversaHolder : MonoBehaviour {
 
-    public string dialogue;
     private ConversaManager cMan;
 
     public string[] dialogueLines;
