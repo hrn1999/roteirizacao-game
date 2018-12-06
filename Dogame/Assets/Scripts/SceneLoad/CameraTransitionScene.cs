@@ -18,8 +18,8 @@ public class CameraTransitionScene : MonoBehaviour {
 
     [Header("Configuration Components")]
     public float timeToChange;
-    public string levelToChange;
-    public Animator animator;
+   
+    public GameObject changer;
 
     private void Awake()
     {
@@ -39,11 +39,6 @@ public class CameraTransitionScene : MonoBehaviour {
         mainCamera.gameObject.SetActive(false);
         transitionCamera.gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
-        animator.SetTrigger("FadeOut");
-    }
-
-    public void OnFadeDone()
-    {
-        SceneManager.LoadScene(levelToChange);
+        changer.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 }

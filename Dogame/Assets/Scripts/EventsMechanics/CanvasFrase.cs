@@ -8,7 +8,7 @@ public class CanvasFrase : MonoBehaviour {
     public GameObject text2;
 
     public float timeBetween;
-
+    public bool whantDestroy;
 
     private void Start()
     {
@@ -27,9 +27,12 @@ public class CanvasFrase : MonoBehaviour {
     IEnumerator TransitionOn(float time)
     {
         yield return new WaitForSeconds(10);
-        text.SetActive(true);
+        text.SetActive(true); 
         yield return new WaitForSeconds(time);
         text.SetActive(false);
         text2.SetActive(true);
+        if (whantDestroy == true)
+            Destroy(gameObject);
+
     }
 }
