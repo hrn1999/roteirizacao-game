@@ -2750,7 +2750,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.262474, y: -5.889277, z: -27.203125}
+  m_LocalPosition: {x: 8.239431, y: -5.889277, z: -27.203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545171859}
@@ -7039,7 +7039,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.372175
+      value: 11.976778
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9990,7 +9990,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.262474
+      value: 8.239431
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10468,7 +10468,7 @@ GameObject:
   - component: {fileID: 1651676772}
   - component: {fileID: 1651676771}
   m_Layer: 0
-  m_Name: MUSIC
+  m_Name: TriggerFalas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10488,6 +10488,7 @@ MonoBehaviour:
   text: {fileID: 2032761815}
   text2: {fileID: 1316820810}
   timeBetween: 10
+  whantDestroy: 0
 --- !u!61 &1651676772
 BoxCollider2D:
   m_ObjectHideFlags: 0

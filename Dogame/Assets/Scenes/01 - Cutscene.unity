@@ -3249,7 +3249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1329556071651704, guid: 841339f9e654524488f71cf0adcfcc4d, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114345526140316560, guid: 841339f9e654524488f71cf0adcfcc4d,
         type: 2}
@@ -7104,7 +7104,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.776497
+      value: -16.908005
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10337,6 +10337,7 @@ MonoBehaviour:
   text: {fileID: 1993141422}
   text2: {fileID: 429821205}
   timeBetween: 8
+  whantDestroy: 0
 --- !u!1 &2085097210
 GameObject:
   m_ObjectHideFlags: 0
