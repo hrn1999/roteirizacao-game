@@ -11,18 +11,9 @@ public class VisionHP : MonoBehaviour {
     [Range(0, 1)][SerializeField]
     private float visionSoftness;
 
-    [Header("Canvas Configuration")]
-    public float CharacterVision;
-
     private void Awake()
     {
         mat.SetFloat("_VRadius", visionRadius);
         mat.SetFloat("_VSoft", visionSoftness);
     }
-
-    private void Update()
-    {
-        mat.SetFloat("_VRadius", visionRadius);
-    }
-
 }

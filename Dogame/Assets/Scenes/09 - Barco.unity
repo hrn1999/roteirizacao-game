@@ -12900,7 +12900,7 @@ MonoBehaviour:
   transitionCamera: {fileID: 643726964}
   myBrain: {fileID: 519420033}
   wantDestroy: 1
-  timeToChange: 10
+  timeToChange: 5
 --- !u!61 &734529737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13722,6 +13722,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1057718605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1113154868186666, guid: d1141e4141913c841827092a9e9b50e2,
+    type: 2}
+  m_PrefabInternal: {fileID: 589438473}
+--- !u!114 &1057718607
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057718605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_AmplitudeGain: 0.5
+  m_FrequencyGain: 0.5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1059857369
 GameObject:
   m_ObjectHideFlags: 0
@@ -16092,7 +16112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customBlend:
     m_Style: 2
-    m_Time: 3
+    m_Time: 5
     m_CustomCurve:
       serializedVersion: 2
       m_Curve:
@@ -20452,6 +20472,26 @@ Transform:
   m_Father: {fileID: 368897083}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1850259823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1113154868186666, guid: d1141e4141913c841827092a9e9b50e2,
+    type: 2}
+  m_PrefabInternal: {fileID: 894123046}
+--- !u!114 &1850259825
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850259823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 20a705aea2d80e0478fb89b6f43d8530, type: 2}
+  m_AmplitudeGain: 0.5
+  m_FrequencyGain: 0.5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1906911109
 GameObject:
   m_ObjectHideFlags: 0

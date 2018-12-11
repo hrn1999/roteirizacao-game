@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanvasFrase : MonoBehaviour {
+public class FraseInsta : MonoBehaviour {
 
     public GameObject text;
     public GameObject text2;
@@ -26,11 +26,12 @@ public class CanvasFrase : MonoBehaviour {
 
     IEnumerator TransitionOn(float time)
     {
-        yield return new WaitForSeconds(10);
-        text.SetActive(true); 
+        text.SetActive(true);
         yield return new WaitForSeconds(time);
         text.SetActive(false);
         text2.SetActive(true);
+        yield return new WaitForSeconds(time);
+        text2.SetActive(false);
         if (wantDestroy == true)
             Destroy(gameObject);
 

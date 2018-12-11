@@ -37,6 +37,15 @@ public class ConversaManager : MonoBehaviour
         dtext.text = dialoaglines[currentLines];
     }
 
+    //uma fala
+    public void ShowBox(string dialogue)
+    {
+        dialogActive = true;
+        dbox.SetActive(true);
+        dtextObj.SetActive(true);
+        dtext.text = dialogue;
+    }
+
     //mais q uma fala
     public void ShowDialogue()
     {
