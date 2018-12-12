@@ -52,7 +52,7 @@ public class MusicListener : MonoBehaviour {
             {    // E esse botão é o último da sequência
                 sequenceIndex = 0;                      // É contado o acerto
                 print("entrou 1");
-                lagarta.GetComponent<LagartaBlocos>().musicPlayed = true;
+                animal.GetComponent<LagartaBlocos>().musicPlayed = true;
             }
         }
         else if (Input.anyKeyDown) sequenceIndex = 0; // Caso contrário, ele volta tudo do zero

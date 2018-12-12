@@ -12,6 +12,7 @@ public class VisionDown : MonoBehaviour
     public float howMuch;
     public float timeToChange;
 
+    public bool destroy;
     //[Header("Bad Strings")]
     //public GameObject bstring;
     //public AudioSource chute;
@@ -37,6 +38,7 @@ public class VisionDown : MonoBehaviour
         mat.SetFloat("_VRadius", visionRadius - howMuch);
         yield return new WaitForSeconds(time);
         //bstring.SetActive(false);
-        Destroy(gameObject);
+        if (destroy == true)
+            Destroy(this.gameObject);
     }
 }
