@@ -24,7 +24,7 @@ public class MusicListener : MonoBehaviour {
     private int sequenceIndex2;
 
     public GameObject flute;
-    public GameObject animal;
+    public GameObject lagarta;
     public Button[] botoes = new Button[5];
     public float delay = 1.0f;
 
