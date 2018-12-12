@@ -8,8 +8,6 @@ public class Menu : MonoBehaviour {
     [SerializeField]
     private string levelToChange;
 
-    public Animator animator;
-
     public void StartGame()
     {
         SceneManager.LoadScene(levelToChange);
