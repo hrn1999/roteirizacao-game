@@ -6,6 +6,7 @@ public class Dialogo : MonoBehaviour
 {
 
     public GameObject[] diag;
+    public AudioSource audio;
 
     private int i = 0;
 
@@ -16,6 +17,7 @@ public class Dialogo : MonoBehaviour
             if (i < diag.Length)
             {
                 diag[i].SetActive(true);
+                audio.Play();
             }
 
             if (Input.GetKeyDown("z") && i < diag.Length)

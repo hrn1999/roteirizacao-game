@@ -7,9 +7,7 @@ public class SceneByTrigger : MonoBehaviour {
     [SerializeField]
     private float timeToChange;
     [SerializeField]
-    private string levelToChange;
-
-    public Animator animator;
+    private GameObject changer;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,12 +20,6 @@ public class SceneByTrigger : MonoBehaviour {
     IEnumerator LoadLevelAfterTrigger(float time)
     {
         yield return new WaitForSeconds(time);
-        animator.SetTrigger("FadeOut");
+        changer.GetComponent<Animator>().SetTrigger("FadeOut");    
     }
-
-    public void OnFadeDone()
-    {
-        SceneManager.LoadScene(levelToChange);
-    }
-
 }
