@@ -11,31 +11,28 @@ public class Dialogo : MonoBehaviour
 
     private int i = 0;
 
-    
+    private bool firstTime = true;
+    private bool aux = true;
+    private bool dentro = false;
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            if (firstTime)
+            {
+                audio.PlayOneShot(clip, 0.7f);
+                diag[i].SetActive(true);
+                firstTime = false;
+                print("entrou");
+            }
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (i < diag.Length)
-            {
-                diag[i].SetActive(true);
-                
-            }
-
-            if (Input.GetKeyDown("z") && i < diag.Length)
-            {
-                diag[i].SetActive(false);
-                Debug.Log(i);
-                audio.PlayOneShot(clip, 0.7f);
-                if (i + 1 <= diag.Length)
-                {
-                    i++;
-                }
-            }
-            else if ((i + 1) > diag.Length && i != diag.Length)
-            {
-                diag[i].SetActive(false);
-            }
+            dentro = true;
 
         }
     }
@@ -45,6 +42,26 @@ public class Dialogo : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             diag[i].SetActive(false);
+            dentro = false;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && i <= diag.Length && dentro == true)
+        {
+            if (i < diag.Length)
+            {
+                diag[i].SetActive(false);
+
+                i++;
+                if (i < diag.Length)
+                {
+                    audio.PlayOneShot(clip, 0.7f);
+                    diag[i].SetActive(true);
+                    print(i);
+                }
+            }
         }
     }
 }

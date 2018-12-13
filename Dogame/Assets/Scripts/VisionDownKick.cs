@@ -14,7 +14,8 @@ public class VisionDownKick : MonoBehaviour
     
     [Header("Bad Strings")]
     public GameObject bstring;
-    public AudioSource chute;
+    public AudioSource audioSource;
+    public AudioClip chute;
     public Rigidbody2D tokick;
     public float kickforce;
 
@@ -33,7 +34,7 @@ public class VisionDownKick : MonoBehaviour
 
     private IEnumerator TakeHit(float time)
     {
-        chute.Play();
+        audioSource.PlayOneShot(chute, 0.3f);
         bstring.SetActive(true);
         visionRadius = mat.GetFloat("_VRadius");
         mat.SetFloat("_VRadius", visionRadius - howMuch);

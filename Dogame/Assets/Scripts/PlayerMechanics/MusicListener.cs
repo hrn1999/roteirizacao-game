@@ -16,12 +16,19 @@ public class MusicListener : MonoBehaviour {
         KeyCode.I
     };
 
+    private KeyCode[] sequence3 = new KeyCode[]{ // Sequência de botões para acerto
+        KeyCode.Y,
+        KeyCode.T,
+        KeyCode.R
+    };
+
     public Animator animator;
 
     private bool fluteOpen = false;
 
     private int sequenceIndex;
     private int sequenceIndex2;
+    private int sequenceIndex3;
 
     public GameObject flute;
     public GameObject animal;
@@ -68,6 +75,18 @@ public class MusicListener : MonoBehaviour {
             }
         }
         else if (Input.anyKeyDown) sequenceIndex2 = 0; // Caso contrário, ele volta tudo do zero
+
+        // SEQUÊNCIA 3
+        if (Input.GetKeyDown(sequence3[sequenceIndex3]) && fluteOpen == true)
+        { // Quando alguém digita um botão da sequência
+            if (++sequenceIndex3 == sequence3.Length)
+            {    // E esse botão é o último da sequência
+                sequenceIndex3 = 0;                      // É contado o acerto
+                print("entrou 3");
+                animal.GetComponent<Potinho>().aguaCheia = true;
+            }
+        }
+        else if (Input.anyKeyDown) sequenceIndex3 = 0; // Caso contrário, ele volta tudo do zero
     }
 
     public void disableButton(){
