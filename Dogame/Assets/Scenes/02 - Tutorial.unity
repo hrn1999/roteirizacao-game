@@ -773,9 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1018ac0d7609e714f927bab1678c3074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: 
   hand: {fileID: 0}
-  audioSource: {fileID: 0}
 --- !u!1 &237161154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,7 +6820,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.8325
+      value: -16.340176
       objectReference: {fileID: 0}
     - target: {fileID: 4105402004245656, guid: d1141e4141913c841827092a9e9b50e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8585,7 +8583,7 @@ Tilemap:
       - {fileID: 21300006, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300008, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300010, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -25, y: -2, z: 0}
@@ -8657,7 +8655,7 @@ Tilemap:
       - {fileID: 21300006, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300008, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300010, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -19, y: -2, z: 0}
@@ -8681,7 +8679,7 @@ Tilemap:
       - {fileID: 21300006, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300008, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300010, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -17, y: -2, z: 0}
@@ -8717,7 +8715,7 @@ Tilemap:
       - {fileID: 21300006, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300008, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300010, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -14, y: -2, z: 0}
@@ -8765,7 +8763,7 @@ Tilemap:
       - {fileID: 21300006, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300008, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
       - {fileID: 21300010, guid: 6bd669eff046f414db56b2a96e835ec0, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -10, y: -2, z: 0}
@@ -9372,7 +9370,6 @@ GameObject:
   - component: {fileID: 1496193062}
   - component: {fileID: 1496193061}
   - component: {fileID: 1496193060}
-  - component: {fileID: 1496193059}
   m_Layer: 0
   m_Name: Placa_Tutorial (3)
   m_TagString: Untagged
@@ -9380,22 +9377,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1496193059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1496193058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d559d8994da143249b3bb03cbd422058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: ced5248fab08b6a449aca23a48ac1547, type: 2}
-  visionRadius: 0
-  howMuch: 0.2
-  timeToChange: 0
-  destroy: 1
 --- !u!61 &1496193060
 BoxCollider2D:
   m_ObjectHideFlags: 0
